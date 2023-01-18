@@ -1,2 +1,4 @@
 nose
 sphinx
+pytest>=7
+pytest-sugar

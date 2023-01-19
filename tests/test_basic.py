@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
 
-from .context import sample  # noqa: F401
-
-import unittest
+from .context import sample
 
 
-class BasicTestSuite(unittest.TestCase):
-    """Basic test cases."""
-
-    def test_absolute_truth_and_meaning(self):
-        assert True
+def test_add_small_integers() -> None:
+    assert sample.add(2, 3) == 5
 
 
-if __name__ == "__main__":
-    unittest.main()
+def test_add_large_integers() -> None:
+    assert sample.add(12345, 5432) == 17777
+
+
+def test_multiply() -> None:
+    assert sample.multiply(7, 9) == 63
+
+
+def test_divide() -> None:
+    assert sample.divide(25, 5) == 5

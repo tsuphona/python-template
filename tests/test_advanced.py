@@ -2,15 +2,8 @@
 
 from .context import sample
 
-import unittest
 
-
-class AdvancedTestSuite(unittest.TestCase):
-    """Advanced test cases."""
-
-    def test_thoughts(self):
-        self.assertIsNone(sample.hmm())
-
-
-if __name__ == "__main__":
-    unittest.main()
+def test_add_multiply_divide() -> None:
+    sum = sample.add(5, 1)
+    factor = sample.multiply(6, 6)
+    assert sample.divide(factor, sum) == 6
